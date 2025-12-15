@@ -23,6 +23,7 @@ class Restaurante:
         # para usar a classe avalição na pasta modelos
         self._avaliacao = []
         # toda vez que cria um objeto restaurante adiciona à lista
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
 
     def __str__(self):
@@ -76,3 +77,9 @@ class Restaurante:
         # usou o round para arrendondar e pegar só uma casa com 1
         media = round(soma_das_notas / quantidade_notas, 1)
         return media
+
+    def adicionar_bebida_no_cardapio(self, bebida):
+        self._cardapio.append(bebida)
+
+    def adicionar_prato_no_cardapio(self, prato):
+        self._cardapio.append(prato)
