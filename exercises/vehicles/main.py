@@ -38,4 +38,12 @@ for vehicle in vehicle_list:
     if isinstance(vehicle, Vehicle):
         print(f"{(type(vehicle).__name__).upper()} - {vehicle}")
     else:
-        raise Exception("Object is not a valid vehicle.")
+        raise Exception("Object is not a valid instance of Vehicle.")
+
+print("\nTurn on the vehicles:\n")
+for vehicle in vehicle_list:
+    if isinstance(vehicle, Vehicle):
+        vehicle.start_vehicle()
+        print(f"{type(vehicle).__name__} - {vehicle}")
+    else:
+        raise Exception("Object is not a valid instance of Vehicle")

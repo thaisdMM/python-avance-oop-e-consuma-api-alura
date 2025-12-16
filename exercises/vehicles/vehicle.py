@@ -22,3 +22,9 @@ class Vehicle:
     def __str__(self):
         start = "on" if self._started else "off"
         return f"Make: {self.make} | Model: {self.model} | Vehicle is: {start}"
+
+    def start_vehicle(self):
+        self._started = True
+
+    def turn_off_vehicle(self):
+        self._started = False
